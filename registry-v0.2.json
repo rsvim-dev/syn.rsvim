@@ -2,7 +2,7 @@
   "grammars": [
     "rust": {
       "git": "https://github.com/tree-sitter/tree-sitter-rust.git",
-      "local": "tree-sitter-rust",
+      "path": "tree-sitter-rust",
       "tag": "v0.24.2"
     }
   ]
