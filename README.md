@@ -1,2 +1,3 @@
 # syn.rsvim
-Treesitter grammars for rsvim syntax
+
+Treesitter grammars for RSVIM syntax.
