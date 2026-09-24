@@ -1,11 +1,11 @@
 # syn.rsvim
 
-<a href="https://www.npmjs.com/package/@rsvim/syn.rsvim"><img alt="rsvim" src="https://img.shields.io/npm/v/%40rsvim%2Fsyn.rsvim" /></a>
-<a href="https://github.com/rsvim/syn.rsvim/actions/workflows/ci.yml"><img alt="ci.yml" src="https://img.shields.io/github/actions/workflow/status/rsvim/syn.rsvim/ci.yml?branch=main&label=ci" /></a>
+<a href="https://www.npmjs.com/package/syn.rsvim"><img alt="rsvim" src="https://img.shields.io/npm/v/%40rsvim%2Fsyn.rsvim" /></a>
+<a href="https://github.com/rsvim-dev/syn.rsvim/actions/workflows/ci.yml"><img alt="ci.yml" src="https://img.shields.io/github/actions/workflow/status/rsvim-dev/syn.rsvim/ci.yml?branch=main&label=ci" /></a>
 
 ## About
 
-Tree-sitter parsers for Rsvim syntax.
+Tree-sitter parsers for Rsvim syntax and highlights.
 
 ## Installation
 
@@ -17,37 +17,52 @@ cd $XDG_CONFIG_HOME/rsvim
 cd $HOME/.rsvim
 ```
 
-Then install with either git or npm.
+Then install with either `git` or `npm`.
 
-<details>
-<summary><small><i style="color: grey;">Which version should I use?</i></small></summary>
-<small><i style="color: grey;">
-
-<ul>
-<li> For release version of Rsvim, use a "x.y.?" branch or tag. </li>
-<li> For development branch of Rsvim, use "main" branch. </li>
-</ul>
-
-</i></small>
-
-</details>
+> Plugin version is compatible with the Rsvim version, e.g. `syn.rsvim 0.1` for `Rsvim 0.1`.
 
 ### git
 
 ```bash
-# version branch
-git clone --branch=v0.1.x https://github.com/rsvim/syn.rsvim @rsvim/syn.rsvim
+# tag
+git clone --branch=v0.2.1 https://github.com/rsvim/syn.rsvim
 
-# or main branch
-git clone https://github.com/rsvim/syn.rsvim @rsvim/syn.rsvim
+# develop
+git clone --branch=main https://github.com/rsvim/syn.rsvim
 ```
 
 ### npm
 
 ```bash
-# tagged version
-npm install @rsvim/syn.rsvim@v0.1.0
+# specific version
+npm install syn.rsvim@0.2.1
 
-# or latest version
-npm install @rsvim/syn.rsvim
+# latest version
+npm install syn.rsvim
+```
+
+## Setup
+
+Setup in your config entry script:
+
+```javascript
+import syn from "syn.rsvim";
+syn.setup();
+```
+
+The `setup` function accepts an optional object, by default is:
+
+```typescript
+const DefaultSetupOptions: SetupOptions = {
+  force: true,
+};
+```
+
+You can pass your custom options when setup:
+
+```javascript
+import syn from "syn.rsvim";
+syn.setup({
+  // Your configurations here...
+});
 ```

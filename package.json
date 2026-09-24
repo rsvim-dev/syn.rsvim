@@ -1,17 +1,17 @@
 {
-  "name": "@rsvim/syn.rsvim",
+  "name": "syn.rsvim",
   "version": "0.2.0",
   "description": "Tree-sitter parsers for Rsvim syntax",
   "keywords": [
     "rsvim"
   ],
-  "homepage": "https://github.com/rsvim/syn.rsvim",
+  "homepage": "https://github.com/rsvim-dev/syn.rsvim",
   "bugs": {
-    "url": "https://github.com/rsvim/syn.rsvim/issues"
+    "url": "https://github.com/rsvim-dev/syn.rsvim/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rsvim/syn.rsvim.git"
+    "url": "git+https://github.com/rsvim-dev/syn.rsvim.git"
   },
   "license": "Vim",
   "author": "rsvim",
@@ -23,6 +23,7 @@
     "tsc": "tsc"
   },
   "devDependencies": {
-    "typescript": "^5.9.3"
+    "rsvim-types": "^0.1.5",
+    "typescript": "^7.0.2"
   }
 }
